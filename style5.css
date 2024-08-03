@@ -1,0 +1,94 @@
+
+
+/*-------------------------------------------------------------*/
+
+.frase-catálogo{
+    font-style: italic;
+    font-size: 20px;
+    position: absolute;
+    /* Posicionamento absoluto */
+    bottom: 550px;
+    /* Distância do texto até o fundo */
+    left: 50%;
+    /* Centraliza horizontalmente */
+    transform: translateX(-50%);
+    /* Ajusta para centralizar horizontalmente */
+    background-color: #F464C3;
+    /* Fundo semi-transparente branco */
+    padding: 10px;
+    /* Espaçamento interno */
+    text-align: center;
+    /* Centraliza o texto */
+    width: 60%;
+    /* Largura do bloco de texto */
+    height: 8%;
+    border-radius: 50px;
+    /* Borda arredondada */
+
+}
+
+#texto-catalogo{
+    font-size: 17px;
+}
+
+/*----------------------------------------------------------------------------*/
+
+
+
+/* DROP DOWN PARA CATEGORIAS -----------------------------------------------------------------*/ 
+
+.botão-categorias{
+    background-color:  #F464C3;
+    color: black;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    border-radius: 20px;
+    margin-left: 40px;
+    margin-block: 15px;
+    
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+display: none;
+position: absolute;
+background-color: #F464C3;
+min-width: 160px;
+box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2) ;
+z-index: 1000;
+margin-left: 20px;
+margin-block: 1px;
+border-radius: 20px;
+
+}
+
+.dropdown-content a {
+float: none;
+color:black;
+padding: 12px 16px;
+text-decoration: none;
+display: block;
+text-align: left;
+}
+
+.dropdown-content a:hover {
+background-color: #e610498e;
+border-radius: 16px;
+
+    }
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/*--------------------------------------------------------------*/
+
+/*MODIFICAÇÕES NOS CARDS*/
+
+
+
