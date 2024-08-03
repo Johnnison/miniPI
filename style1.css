@@ -201,7 +201,7 @@ nav a {
     font-size: 20px;
     position: absolute;
     /* Posicionamento absoluto */
-    bottom: 200px;
+    bottom: 150px;
     /* Distância do texto até o fundo */
     left: 50%;
     /* Centraliza horizontalmente */
@@ -215,7 +215,7 @@ nav a {
     /* Centraliza o texto */
     width: 50%;
     /* Largura do bloco de texto */
-    height: 8%;
+    height: 7%;
     border-radius: 50px;
     /* Borda arredondada */
 
