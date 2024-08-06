@@ -1,4 +1,148 @@
 
+/* Definição das variáveis CSS para cores principais */
+:root {
+    --cor-primaria: #F464C3;
+    /* Cor primária do tema */
+    --cor-secundaria: #3D1C31;
+    /* Cor secundária do tema */
+    --cor-terciaria: #FDACE0;
+    /* Cor terciária do tema */
+    --branco: white;
+    /* Cor branca */
+    --preto: black;
+    /* Cor preta */
+}
+
+/* Reset de estilos para todos os elementos */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* Estilos gerais do corpo da página */
+body {
+    font-family: Arial, sans-serif;
+    /* Fonte padrão */
+    line-height: 1.6;
+    /* Altura da linha */
+    background-color: #f8f8f8;
+    /* Cor de fundo */
+}
+
+/* Estilos do cabeçalho */
+header {
+    background-color: var(--cor-primaria);
+    /* Cor de fundo do cabeçalho */
+    display: flex;
+    padding: 1rem;
+
+    justify-content: space-between;
+    /* Alinha itens ao redor */
+    align-items: center;
+    /* Centraliza verticalmente */
+    color: var(--branco);
+    /* Cor do texto */
+}
+
+/* Estilos dos links no cabeçalho */
+header a {
+    text-decoration: none;
+    /* Remove sublinhado dos links */
+    color: var(--branco);
+    /* Cor do texto */
+    font-size: 1.2rem;
+    /* Tamanho da fonte */
+}
+
+/* Estilos do formulário de busca no cabeçalho */
+#form-buscar {
+    flex-grow: 1;
+    /* Cresce para ocupar espaço restante */
+    display: flex;
+    /* Exibe como flexível */
+    align-items: center;
+    /* Centraliza verticalmente */
+    position: relative;
+    /* Posicionamento relativo */
+}
+
+/* Estilos para o campo de busca */
+#buscar {
+    flex-grow: 1;
+    /* Cresce para ocupar espaço restante */
+    padding: 0.4rem;
+    /* Espaçamento interno */
+    border-radius: 5px;
+    /* Borda arredondada */
+    border: none;
+    /* Sem borda */
+    outline: none;
+    /* Sem contorno ao foco */
+}
+
+/* Estilos para o botão de busca no cabeçalho */
+#btn-buscar {
+    background-color: transparent;
+    /* Cor de fundo transparente */
+    border: none;
+    /* Sem borda */
+    position: absolute;
+    /* Posicionamento absoluto */
+    right: 10px;
+    /* À direita */
+    top: 50%;
+    /* Ao centro verticalmente */
+    transform: translateY(-50%);
+    /* Ajusta para centralizar */
+    cursor: pointer;
+    /* Cursor ao passar */
+}
+
+/* Estilos para a imagem de busca no botão */
+.img-search {
+    width: 25px;
+    /* Largura */
+    object-fit: contain;
+    /* Ajuste de imagem */
+}
+
+/* Estilos para os links de ícone no cabeçalho */
+.icon-link {
+    display: flex;
+    /* Exibe como flexível */
+    flex-direction: column;
+    /* Direção de coluna */
+    align-items: center;
+    /* Centraliza verticalmente */
+    margin: 0 0.5rem;
+    /* Margem externa */
+}
+
+/* Estilos da navegação principal */
+nav {
+    display: grid;
+    /* Exibe como grid */
+    grid-template-columns: repeat(2, 1fr);
+    /* Duas colunas iguais */
+    text-align: center;
+    /* Centraliza texto */
+    background-color: var(--cor-terciaria);
+    /* Cor de fundo */
+    padding: 0.5rem;
+    /* Espaçamento interno */
+}
+
+/* Estilos para o primeiro link da navegação */
+nav a:first-child {
+    border-right: 1px solid var(--preto);
+    /* Linha divisória à direita */
+}
+
+nav a {
+    text-decoration: none;
+    color: black;
+}
 
 /*-------------------------------------------------------------*/
 
@@ -86,9 +230,63 @@ border-radius: 16px;
     display: block;
 }
 
+
+/*rodapé ajustes*/
+
+/* Estilos do rodapé simples */
+footer {
+    background-color: var(--cor-primaria);
+    /* Usando a cor secundária definida */
+    color: var(--branco);
+    /* Cor do texto do rodapé */
+    text-align: center;
+    /* Centraliza o texto */
+    padding: 3rem;
+    /* Espaçamento interno */
+    position: relative;
+    /* Para garantir que o rodapé fique no final da página */
+    bottom: 0;
+    width: 100%;
+    /* Garante que o rodapé ocupe toda a largura da página */
+    margin-top: 350px;
+}
+
+footer p {
+    margin: 0;
+    /* Remove a margem padrão */
+
+}
+
+
 /*--------------------------------------------------------------*/
 
 /*MODIFICAÇÕES NOS CARDS*/
 
+.container{
+    display: flex; /* imagens alinhadas lado a lado*/
+    flex-wrap: wrap; /* ajusta para não ficar varios itens ajusta na tela*/
+    justify-content: space-around; /* dividir espaço no container*/
+    padding: 10rem;
+}
 
 
+.card{
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 0px;
+    width: 200px;
+    text-align: center;
+    box-sizing: border-box;
+    margin: 1rem; /* Espaço ao redor dos cards */
+    margin: 1rem; /* Espaço ao redor dos cards */
+}
+
+.card img {
+    max-width: 100%;
+    border-radius: 8px;
+
+}
+
+.card h3{
+    margin-top: 8px;
+}
