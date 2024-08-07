@@ -1,5 +1,363 @@
+/* Definição das variáveis CSS para cores principais */
+:root {
+    --cor-primaria: #F464C3; /* Cor primária do tema */
+    --cor-secundaria: #3D1C31; /* Cor secundária do tema */
+    --cor-terciaria: #FDACE0; /* Cor terciária do tema */
+    --branco: white; /* Cor branca */
+    --preto: black; /* Cor preta */
+}
+
+/* Reset de estilos para todos os elementos */
+* {
+    padding: 0; /* Remove o espaçamento interno */
+    margin: 0; /* Remove a margem externa */
+    box-sizing: border-box; /* Inclui bordas e padding no cálculo de largura e altura */
+}
+
+/* Estilos gerais do corpo da página */
 body {
-    font-family: Arial, Helvetica, sans-serif;
-    background-image: linear-gradient(to right, rgba(220, 20, 177, 0.874), rgb(71, 17, 29));
-  
+    font-family: Arial, sans-serif; /* Fonte padrão */
+    line-height: 1.6; /* Altura da linha */
+    background-color: #f8f8f8; /* Cor de fundo */
+}
+
+/* Estilos do cabeçalho */
+header {
+    background-color: var(--cor-primaria); /* Cor de fundo do cabeçalho */
+    display: flex; /* Define um layout flexível */
+    padding: 1rem; /* Espaçamento interno do cabeçalho */
+    justify-content: space-between; /* Alinha itens ao redor */
+    align-items: center; /* Centraliza verticalmente */
+    color: var(--branco); /* Cor do texto */
+}
+
+/* Estilos dos links no cabeçalho */
+header a {
+    text-decoration: none; /* Remove sublinhado dos links */
+    color: var(--branco); /* Cor do texto */
+    font-size: 1.2rem; /* Tamanho da fonte */
+}
+
+/* Estilos do formulário de busca no cabeçalho */
+#form-buscar {
+    flex-grow: 1; /* Cresce para ocupar espaço restante */
+    display: flex; /* Exibe como flexível */
+    align-items: center; /* Centraliza verticalmente */
+    position: relative; /* Posicionamento relativo para o botão de busca */
+}
+
+/* Estilos para o campo de busca */
+#buscar {
+    flex-grow: 1; /* Cresce para ocupar espaço restante */
+    padding: 0.4rem; /* Espaçamento interno */
+    border-radius: 5px; /* Borda arredondada */
+    border: none; /* Sem borda */
+    outline: none; /* Sem contorno ao foco */
+}
+
+/* Estilos para o botão de busca no cabeçalho */
+#btn-buscar {
+    background-color: transparent; /* Cor de fundo transparente */
+    border: none; /* Sem borda */
+    position: absolute; /* Posicionamento absoluto */
+    right: 10px; /* À direita */
+    top: 50%; /* Ao centro verticalmente */
+    transform: translateY(-50%); /* Ajusta para centralizar verticalmente */
+    cursor: pointer; /* Cursor ao passar */
+}
+
+/* Estilos para a imagem de busca no botão */
+.img-search {
+    width: 25px; /* Largura da imagem */
+    object-fit: contain; /* Ajuste de imagem para manter proporção */
+}
+
+/* Estilos para os links de ícone no cabeçalho */
+.icon-link {
+    display: flex; /* Exibe como flexível */
+    flex-direction: column; /* Direção de coluna */
+    align-items: center; /* Centraliza verticalmente */
+    margin: 0 0.5rem; /* Margem externa */
+}
+
+/* Estilos da navegação principal */
+nav {
+    display: grid; /* Exibe como grid */
+    grid-template-columns: repeat(2, 1fr); /* Duas colunas iguais */
+    text-align: center; /* Centraliza texto */
+    background-color: var(--cor-terciaria); /* Cor de fundo */
+    padding: 0.5rem; /* Espaçamento interno */
+}
+
+/* Estilos para o primeiro link da navegação */
+nav a:first-child {
+    border-right: 1px solid var(--preto); /* Linha divisória à direita */
+}
+
+/* Estilos gerais para os links da navegação */
+nav a {
+    text-decoration: none; /* Remove sublinhado dos links */
+    color: black; /* Cor do texto */
+}
+
+/* Estilos do rodapé simples */
+footer {
+    background-color: var(--cor-primaria); /* Cor de fundo do rodapé */
+    color: var(--branco); /* Cor do texto do rodapé */
+    text-align: center; /* Centraliza o texto */
+    padding: 3rem; /* Espaçamento interno */
+    position: relative; /* Para garantir que o rodapé fique no final da página */
+    bottom: 0; /* Alinha ao fundo */
+    width: 100%; /* Garante que o rodapé ocupe toda a largura da página */
+    margin-top: 350px; /* Margem superior para espaçar do conteúdo acima */
+}
+
+footer p {
+    margin: 0; /* Remove a margem padrão dos parágrafos */
+}
+
+/* Reset geral com nova fonte */
+
+
+
+
+
+* {
+    padding: 0; /* Remove o espaçamento interno */
+    margin: 0; /* Remove a margem externa */
+    box-sizing: border-box; /* Inclui bordas e padding no cálculo de largura e altura */
+    font-family: 'Inter', sans-serif; /* Fonte padrão */
+}
+
+
+
+
+
+/* Estilos do corpo com largura e altura de 100% */
+body {
+    width: 100%; /* Largura total */
+    height: 100vh; /* Altura total da visualização */
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center; /* Centraliza verticalmente */
+    background-color: rgba(255, 192, 203, 0.795); /* Cor de fundo */
+}
+
+/* Estilos do container principal */
+.containe {
+    width: 80%; /* Largura do container */
+    height: 80vh; /* Altura do container */
+    display: flex; /* Exibe como flexível */
+    box-shadow: 5px 5px 10px rgba(165, 3, 84, 0.301); /* Sombra ao redor do container */
+}
+
+/* Estilos para a imagem do formulário */
+.form-image {
+    width: 50%; /* Largura da imagem */
+    display: flex; /* Exibe como flexível */
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center; /* Centraliza verticalmente */
+    background-color: #fde3a7d7; /* Cor de fundo da imagem */
+    padding: 1rem; /* Espaçamento interno */
+}
+
+/* Estilos para o formulário */
+.form {
+    width: 50%; /* Largura do formulário */
+    display: flex; /* Exibe como flexível */
+    justify-content: center; /* Centraliza horizontalmente */
+    flex-direction: column; /* Direção da coluna */
+    background-color: #fff; /* Cor de fundo do formulário */
+    margin-top: 6rem; /* Margem superior para espaçamento */
+    margin-left: 25%; /* Margem esquerda para centralizar */
+    border-radius: 20px;
+}
+
+/* Estilos do cabeçalho do formulário */
+.form-header {
+    margin-bottom: 3rem; /* Margem inferior para espaçamento */
+    display: flex; /* Exibe como flexível */
+    justify-content: space-between; /* Alinha itens ao redor */
+    justify-content: center;
+}
+
+/* Estilos para o botão de login */
+.login-button {
+    display: none; /* Inicialmente oculto */
+    background-color: #6c63ff; /* Cor de fundo do botão */
+    padding: 0.4rem 1rem; /* Espaçamento interno */
+    border-radius: 5px; /* Borda arredondada */
+    cursor: pointer; /* Cursor ao passar */
+}
+
+/* Estilos para o botão de login ao passar o mouse */
+.login-button button:hover {
+    background-color: #6b63fff1; /* Cor de fundo ao passar o mouse */
+}
+
+/* Estilos para links dentro do botão de login */
+.login-button button a {
+    text-decoration: none; /* Remove sublinhado do link */
+    font-weight: 500; /* Peso da fonte */
+    color: #fff; /* Cor do texto */
+}
+
+/* Estilos do cabeçalho do formulário com linha abaixo */
+.form-header h1::after {
+    content: ''; /* Cria um pseudo-elemento após o h1 */
+    display: block; /* Exibe como bloco */
+    width: 50%; /* Largura da linha */
+    height: 0.3rem; /* Altura da linha */
+    background-color: #e90e95c7; /* Cor da linha */
+    margin: 0 auto; /* Centraliza horizontalmente */
+    position: absolute; /* Posiciona absolutamente */
+    border-radius: 10px; /* Borda arredondada */
+}
+
+/* Estilos do grupo de entrada */
+.input-group {
+    display: flex; /* Exibe como flexível */
+    flex-wrap: wrap; /* Permite quebra de linha */
+    justify-content: space-between; /* Espaça itens uniformemente */
+    padding: 1rem 0; /* Espaçamento interno superior e inferior */
+}
+
+/* Estilos da caixa de entrada */
+.input-box {
+    display: flex; /* Exibe como flexível */
+    flex-direction: column; /* Direção da coluna */
+    margin-bottom: 1.1rem; /* Margem inferior */
+    margin-left: 50px;
+    margin-right: 50px;
+}
+
+/* Estilos para os campos de entrada */
+.input-box input {
+    margin: 0.6rem 0; /* Margem superior e inferior */
+    padding: 0.8rem 1.2rem; /* Espaçamento interno */
+    border: none; /* Sem borda */
+    border-radius: 10px; /* Borda arredondada */
+    box-shadow: 1px 1px 6px #0000001c; /* Sombra ao redor do campo */
+}
+
+/* Estilos para campos de entrada ao passar o mouse */
+.input-box input:hover {
+    background-color: #eeeeee75; /* Cor de fundo ao passar o mouse */
+}
+
+/* Estilos para campos de entrada em foco */
+.input-box input:focus-visible {
+    outline: 1px solid #df1189; /* Contorno ao focar */
+}
+
+/* Estilos para rótulos de entrada e título de gênero */
+.input-box label,
+.gender-title h6 {
+    font-size: 0.75rem; /* Tamanho da fonte */
+    font-weight: 600; /* Peso da fonte */
+    color: #000000c0; /* Cor do texto */
+}
+
+/* Estilos para o placeholder dos campos de entrada */
+.input-box input::placeholder {
+    color: #000000be; /* Cor do placeholder */
+}
+
+/* Estilos do grupo de gênero */
+.gender-group {
+    display: flex; /* Exibe como flexível */
+    justify-content: space-between; /* Espaça itens uniformemente */
+    margin-top: 0.62rem; /* Margem superior */
+    padding: 0 0.5rem; /* Espaçamento interno lateral */
+}
+
+/* Estilos para a entrada de gênero */
+
+.gender-title{
+text-align: center;
+}
+.gender-input {
+    display: flex; /* Exibe como flexível */
+    align-items: center; /* Centraliza verticalmente */
+    justify-content: center;
+}
+
+/* Estilos para o campo de entrada de gênero */
+.gender-input input {
+    margin-right: 0.35rem; /* Margem direita */
+}
+
+/* Estilos para rótulos de entrada de gênero */
+.gender-input label {
+    font-size: 0.81rem; /* Tamanho da fonte */
+    font-weight: 600; /* Peso da fonte */
+    color: #000000c0; /* Cor do texto */
+}
+
+/* Estilos do botão de continuar */
+.continue-button button {
+    width: 100%; /* Largura total */
+    margin-top: 2.5rem; /* Margem superior */
+    border: none; /* Sem borda */
+    background-color: #eb0c74de; /* Cor de fundo */
+    padding: 0.62rem; /* Espaçamento interno */
+    border-radius: 5px; /* Borda arredondada */
+    cursor: pointer; /* Cursor ao passar */
+}
+
+/* Estilos para o botão de continuar ao passar o mouse */
+.continue-button button:hover {
+    background-color: #e0184391; /* Cor de fundo ao passar o mouse */
+}
+
+/* Estilos para links dentro do botão de continuar */
+.continue-button button a {
+    text-decoration: none; /* Remove sublinhado do link */
+    font-size: 0.93rem; /* Tamanho da fonte */
+    font-weight: 500; /* Peso da fonte */
+    color: #fff; /* Cor do texto */
+}
+
+/* RESPONSIVIDADE */
+
+/* Estilos para telas menores que 1330px */
+@media screen and (max-width: 1330px) {
+    .form-image {
+        display: none; /* Oculta a imagem do formulário */
+    }
+    
+    .container {
+        width: 50%; /* Reduz a largura do container */
+    }
+
+    .form {
+        width: 100%; /* Largura total do formulário */
+    }
+}
+
+/* Estilos para telas menores que 1064px */
+@media screen and (max-width: 1064px) {
+    .container {
+        width: 90%; /* Largura do container reduzida */
+        height: auto; /* Altura automática */
+    }
+
+    .input-group {
+        flex-direction: column; /* Direção da coluna */
+        overflow-y: scroll; /* Permite rolagem vertical */
+        flex-wrap: nowrap; /* Não permite quebra de linha */
+        max-height: 10rem; /* Altura máxima */
+        padding-right: 5rem; /* Espaçamento interno à direita */
+    }
+
+    .gender-inputs {
+        margin-top: 2rem; /* Margem superior */
+    }
+
+    .gender-group {
+        flex-direction: column; /* Direção da coluna */
+    }
+
+    .gender-input {
+        margin-top: 0.5rem; /* Margem superior */
+    }
 }
