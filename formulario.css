@@ -205,7 +205,7 @@ body {
 .form-header h1::after {
     content: ''; /* Cria um pseudo-elemento após o h1 */
     display: block; /* Exibe como bloco */
-    width: 50%; /* Largura da linha */
+    width: 12%; /* Largura da linha */
     height: 0.3rem; /* Altura da linha */
     background-color: #e90e95c7; /* Cor da linha */
     margin: 0 auto; /* Centraliza horizontalmente */
