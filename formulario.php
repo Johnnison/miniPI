@@ -1,30 +1,29 @@
 <?php
+// Verifica se o formulário foi enviado
 if (isset($_POST['submit'])) {
-  print_r('Primeiro Nome: ' . $_POST['firstname']);
-  print_r('<br>');
-  print_r('SobreNome: '   .  $_POST['lastname']);
-  print_r('<br>');
-  print_r('Email: '   .     $_POST['email']);
-  print_r('<br>');
-  print_r('Celular: '  .     $_POST['number']);
-  print_r('<br>');
-  print_r('Senha: '   . $_POST['password']);
-  print_r('<br>');
-  print_r('Gênero: '   .    $_POST['gender']);
+    // Criar um array com os dados do formulário, aplicando htmlspecialchars para segurança
+    $dados = [
+        'Primeiro Nome' => htmlspecialchars($_POST['firstname']), // Armazena o primeiro nome
+        'Sobrenome' => htmlspecialchars($_POST['lastname']),     // Armazena o sobrenome
+        'Email' => htmlspecialchars($_POST['email']),           // Armazena o email
+        'Celular' => htmlspecialchars($_POST['number']),        // Armazena o número de celular
+        'Senha' => htmlspecialchars($_POST['password']),        // Armazena a senha
+        'Gênero' => htmlspecialchars($_POST['gender']),         // Armazena o gênero
+    ];
+
+    // Exibir os dados usando print_r (para depuração)
+    echo '<pre>'; // Para uma melhor formatação da saída
+    print_r($dados); // Exibe o conteúdo do array $dados
+    echo '</pre>';
+
+    // Exibir os dados de forma organizada
+    foreach ($dados as $chave => $valor) {
+        echo $chave . ': ' . $valor . '<br>'; // Exibe cada par chave-valor em uma nova linha
+    }
 }
-
-$nome = $_POST['firstname'];
-$ = $_POST['lastname'];
-$email = $_POST['email'];
-$number = $_POST['number'];
-$password = $_POST['password'];
-$gender = $_POST['gender'];
-
-
-
-
-
 ?>
+
+
 
 
 <!DOCTYPE html>

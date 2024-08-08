@@ -3,7 +3,7 @@
 $dbHost = "localhost";
 $dbUsername = "root";
 $dbPassword = '';
-$dbName = 'minipi'; // Adicione o ponto e vírgula no final da declaração
+$dbName = 'minipi'; 
 
 $conexao = new mysqli($dbHost, $dbUsername, $dbPassword, $dbName);
 
