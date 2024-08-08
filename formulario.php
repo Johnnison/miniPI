@@ -1,3 +1,32 @@
+<?php
+if (isset($_POST['submit'])) {
+  print_r('Primeiro Nome: ' . $_POST['firstname']);
+  print_r('<br>');
+  print_r('SobreNome: '   .  $_POST['lastname']);
+  print_r('<br>');
+  print_r('Email: '   .     $_POST['email']);
+  print_r('<br>');
+  print_r('Celular: '  .     $_POST['number']);
+  print_r('<br>');
+  print_r('Senha: '   . $_POST['password']);
+  print_r('<br>');
+  print_r('Gênero: '   .    $_POST['gender']);
+}
+
+$nome = $_POST['firstname'];
+$ = $_POST['lastname'];
+$email = $_POST['email'];
+$number = $_POST['number'];
+$password = $_POST['password'];
+$gender = $_POST['gender'];
+
+
+
+
+
+?>
+
+
 <!DOCTYPE html>
 <html lang="pt-BR">
 
@@ -20,33 +49,33 @@
 
   <header>
     <a href="">LudoFashion</a> <!-- Logo ou título do site -->
-    <form action="" id="form-buscar">
-        <input type="search" name="buscar" id="buscar" placeholder="buscar..."> <!-- Formulário de busca -->
-        <button type="submit" id="btn-buscar" class="btn-transparent">
-            <img src="IMG/lupaX.png" alt="buscar" class="img-search"> <!-- Ícone de busca -->
-        </button>
+    <form action="formulario.php" method="$_POST" id="form-buscar">
+      <input type="search" name="buscar" id="buscar" placeholder="buscar..."> <!-- Formulário de busca -->
+      <button type="submit" id="btn-buscar" class="btn-transparent">
+        <img src="IMG/lupaX.png" alt="buscar" class="img-search"> <!-- Ícone de busca -->
+      </button>
     </form>
-  
+
     <a href="" class="icon-link">
-        <img src="IMG/cadastre-seX.png" alt="Cadastre-se" width="40px">
-        Cadastre-se <!-- Link para cadastro -->
+      <img src="IMG/cadastre-seX.png" alt="Cadastre-se" width="40px">
+      Cadastre-se <!-- Link para cadastro -->
     </a>
-  
+
     <a href="" class="icon-link">
-        <img src="IMG/duvidasX.png" alt="Dúvidas" width="50px">
-        Dúvidas <!-- Link para dúvidas -->
+      <img src="IMG/duvidasX.png" alt="Dúvidas" width="50px">
+      Dúvidas <!-- Link para dúvidas -->
     </a>
   </header>
-  
+
   <nav>
     <a href="">Catálogo</a> <!-- Link para o catálogo -->
     <a href="">Sobre a loja</a> <!-- Link para informações sobre a loja -->
   </nav>
-  
-  
-  
-  
-  
+
+
+
+
+
 
 
 
@@ -127,7 +156,7 @@
 
   <footer>
     <p>&copy; 2024 LudoFashion. Todos os direitos reservados.</p>
-</footer>
+  </footer>
 
 
 </body>
