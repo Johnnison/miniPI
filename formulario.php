@@ -3,12 +3,12 @@
 if (isset($_POST['submit'])) {
     // Criar um array com os dados do formulário, aplicando htmlspecialchars para segurança
     $dados = [
-        'Primeiro Nome' => htmlspecialchars($_POST['firstname']), // Armazena o primeiro nome
-        'Sobrenome' => htmlspecialchars($_POST['lastname']),     // Armazena o sobrenome
-        'Email' => htmlspecialchars($_POST['email']),           // Armazena o email
-        'Celular' => htmlspecialchars($_POST['number']),        // Armazena o número de celular
-        'Senha' => htmlspecialchars($_POST['password']),        // Armazena a senha
-        'Gênero' => htmlspecialchars($_POST['gender']),         // Armazena o gênero
+        'Primeiro Nome' => htmlspecialchars($_POST['primeiro_nome']), // Corrigido para 'primeiro_nome'
+        'Sobrenome' => htmlspecialchars($_POST['sobrenome']),
+        'Email' => htmlspecialchars($_POST['email']),
+        'Celular' => htmlspecialchars($_POST['telefone']), // Corrigido para 'telefone'
+        'Senha' => htmlspecialchars($_POST['senha']),
+        'Gênero' => htmlspecialchars($_POST['genero']), // Corrigido para 'genero'
     ];
 
     // Exibir os dados usando print_r (para depuração)
@@ -21,8 +21,44 @@ if (isset($_POST['submit'])) {
         echo $chave . ': ' . $valor . '<br>'; // Exibe cada par chave-valor em uma nova linha
     }
 }
-?>
 
+
+// Verifica se o formulário foi enviado
+if (isset($_POST['submit'])) {
+  // Verifica se a imagem foi enviada e se não ocorreu erro
+  if (isset($_FILES['imagem_perfil']) && $_FILES['imagem_perfil']['error'] === UPLOAD_ERR_OK) {
+      // Obtém informações do arquivo da imagem
+      $imagem = $_FILES['imagem_perfil'];
+      $nomeImagem = $imagem['name'];
+      $tipoImagem = $imagem['type'];
+      $tmpImagem = $imagem['tmp_name'];
+      $errorImagem = $imagem['error'];
+
+      // Valida o tipo de imagem (ex: JPEG, PNG, GIF)
+      $tiposPermitidos = ['image/jpg', 'image/jpeg', 'image/png', 'image/gif'];
+      if (in_array($tipoImagem, $tiposPermitidos)) {
+          // Gera um nome único para a imagem
+          $novoNomeImagem = uniqid('perfil_', true) . '.' . pathinfo($nomeImagem, PATHINFO_EXTENSION);
+          // Define o diretório onde a imagem será salva
+          $diretorio = 'uploads/';
+
+          // Move a imagem para o diretório
+          if (move_uploaded_file($tmpImagem, $diretorio . $novoNomeImagem)) {
+              echo "Imagem de perfil enviada com sucesso: " . $novoNomeImagem;
+          } else {
+              echo "Erro ao mover a imagem para o diretório.";
+          }
+      } else {
+          echo "Formato de imagem não permitido.";
+      }
+  } else {
+      echo "Erro no upload da imagem.";
+  }
+}
+
+
+
+?>
 
 
 
@@ -36,55 +72,35 @@ if (isset($_POST['submit'])) {
   <title>Formulário de Cadastro</title>
 </head>
 
-
-
-
-
-
-
 <body>
 
-
-
   <header>
-    <a href="">LudoFashion</a> <!-- Logo ou título do site -->
-    <form action="formulario.php" method="$_POST" id="form-buscar">
-      <input type="search" name="buscar" id="buscar" placeholder="buscar..."> <!-- Formulário de busca -->
+    <a href="">LudoFashion</a>
+    <form action="formulario.php" method="post" id="form-buscar"> <!-- Corrigido para "post" -->
+      <input type="search" name="buscar" id="buscar" placeholder="buscar...">
       <button type="submit" id="btn-buscar" class="btn-transparent">
-        <img src="IMG/lupaX.png" alt="buscar" class="img-search"> <!-- Ícone de busca -->
+        <img src="IMG/lupaX.png" alt="buscar" class="img-search">
       </button>
     </form>
 
     <a href="" class="icon-link">
       <img src="IMG/cadastre-seX.png" alt="Cadastre-se" width="40px">
-      Cadastre-se <!-- Link para cadastro -->
+      Cadastre-se
     </a>
 
     <a href="" class="icon-link">
       <img src="IMG/duvidasX.png" alt="Dúvidas" width="50px">
-      Dúvidas <!-- Link para dúvidas -->
+      Dúvidas
     </a>
   </header>
 
   <nav>
-    <a href="">Catálogo</a> <!-- Link para o catálogo -->
-    <a href="">Sobre a loja</a> <!-- Link para informações sobre a loja -->
+    <a href="">Catálogo</a>
+    <a href="">Sobre a loja</a>
   </nav>
 
-
-
-
-
-
-
-
-
-
-
-
-
   <div class="form">
-    <form action="#" method="POST">
+    <form action="formulario.php" method="POST"> <!-- Corrigido para o arquivo correto -->
       <div class="form-header">
         <div class="title">
           <h1>Cadastre-se</h1>
@@ -95,13 +111,13 @@ if (isset($_POST['submit'])) {
       </div>
 
       <div class="input-box">
-        <label for="firstname">Primeiro nome</label>
-        <input id="firstname" type="text" name="firstname" placeholder="Digite seu Primeiro nome" required>
+        <label for="primeiro_nome">Primeiro nome</label>
+        <input id="primeiro_nome" type="text" name="primeiro_nome" placeholder="Digite seu Primeiro nome" required> <!-- Corrigido para 'primeiro_nome' -->
       </div>
 
       <div class="input-box">
-        <label for="lastname">Sobrenome</label>
-        <input id="lastname" type="text" name="lastname" placeholder="Digite seu Sobrenome" required>
+        <label for="sobrenome">Sobrenome</label>
+        <input id="sobrenome" type="text" name="sobrenome" placeholder="Digite seu Sobrenome" required>
       </div>
 
       <div class="input-box">
@@ -110,13 +126,13 @@ if (isset($_POST['submit'])) {
       </div>
 
       <div class="input-box">
-        <label for="number">Celular</label>
-        <input id="number" type="tel" name="number" placeholder="(xx) xxxx-xxxx" required>
+        <label for="telefone">Celular</label>
+        <input id="telefone" type="tel" name="telefone" placeholder="(xx) xxxx-xxxx" required> <!-- Corrigido para 'telefone' -->
       </div>
 
       <div class="input-box">
-        <label for="password">Senha</label>
-        <input id="password" type="password" name="password" placeholder="Digite sua Senha" required>
+        <label for="senha">Senha</label>
+        <input id="senha" type="password" name="senha" placeholder="Digite sua Senha" required>
       </div>
 
       <div class="gender-inputs">
@@ -125,38 +141,67 @@ if (isset($_POST['submit'])) {
         </div>
 
         <div class="gender-input">
-          <input type="radio" id="female" name="gender" value="feminino">
-          <label for="female">Feminino</label>
+          <input type="radio" id="feminino" name="genero" value="feminino">
+          <label for="feminino">Feminino</label>
         </div>
 
         <div class="gender-input">
-          <input type="radio" id="male" name="gender" value="masculino">
-          <label for="male">Masculino</label>
+          <input type="radio" id="masculino" name="genero" value="masculino">
+          <label for="masculino">Masculino</label>
         </div>
 
         <div class="gender-input">
-          <input type="radio" id="others" name="gender" value="outros">
-          <label for="others">Outros</label>
+          <input type="radio" id="outros" name="genero" value="outros">
+          <label for="outros">Outros</label>
         </div>
 
         <div class="gender-input">
-          <input type="radio" id="none" name="gender" value="prefiro_nao_dizer">
-          <label for="none">Prefiro não Dizer</label>
+          <input type="radio" id="none" name="genero" value="prefiro_nao_dizer">
+          <label for="none">Prefiro não Dizer</label> <!-- Corrigido para 'none' -->
         </div>
       </div>
 
+
+      <div class="foto-perfil">
+            <img src="IMG/default-profile.png" alt="Foto de Perfil" id="foto" width="150" height="150"> <!-- Imagem de perfil padrão -->
+            <input type="file" id="upload" accept="image/*"> <!-- Campo para upload da foto de perfil -->
+        </div>
+        <script>
+        // Script para atualizar a foto de perfil quando um arquivo é selecionado
+        document.getElementById('upload').addEventListener('change', function (event) {
+            const file = event.target.files[0]; // Obtém o primeiro arquivo selecionado
+            const reader = new FileReader(); // Cria um objeto FileReader
+
+            reader.onload = function (e) {
+                // Atualiza a imagem da foto de perfil com o arquivo selecionado
+                document.getElementById('foto').src = e.target.result; 
+            };
+
+            if (file) {
+                reader.readAsDataURL(file); // Lê o arquivo como URL de dados
+            }
+        });
+    </script>
+
+
+
+
+
+
+
+
+
+
+
       <div class="continue-button">
-        <button type="submit">Continuar</button>
+        <button type="submit" name="submit">Continuar</button> <!-- Adicionada a propriedade name para o botão -->
       </div>
     </form>
   </div>
 
-
-
   <footer>
     <p>&copy; 2024 LudoFashion. Todos os direitos reservados.</p>
   </footer>
-
 
 </body>
 
