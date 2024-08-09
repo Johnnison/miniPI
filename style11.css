@@ -1,0 +1,247 @@
+/* Definição das variáveis CSS para cores principais */
+:root {
+    --cor-primaria: #F464C3;
+    /* Cor primária do tema */
+    --cor-secundaria: #3D1C31;
+    /* Cor secundária do tema */
+    --cor-terciaria: #FDACE0;
+    /* Cor terciária do tema */
+    --branco: white;
+    /* Cor branca */
+    --preto: black;
+    /* Cor preta */
+}
+
+/* Reset de estilos para todos os elementos */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* Estilos gerais do corpo da página */
+body {
+    font-family: Arial, sans-serif;
+    /* Fonte padrão */
+    line-height: 1.6;
+    /* Altura da linha */
+    background-color: #f8f8f8;
+    /* Cor de fundo */
+}
+
+/* Estilos do cabeçalho */
+header {
+    background-color: var(--cor-primaria);
+    /* Cor de fundo do cabeçalho */
+    display: flex;
+    padding: 1rem;
+
+    justify-content: space-between;
+    /* Alinha itens ao redor */
+    align-items: center;
+    /* Centraliza verticalmente */
+    color: var(--branco);
+    /* Cor do texto */
+}
+
+/* Estilos dos links no cabeçalho */
+header a {
+    text-decoration: none;
+    /* Remove sublinhado dos links */
+    color: var(--branco);
+    /* Cor do texto */
+    font-size: 1.2rem;
+    /* Tamanho da fonte */
+}
+
+/* Estilos do formulário de busca no cabeçalho */
+#form-buscar {
+    flex-grow: 1;
+    /* Cresce para ocupar espaço restante */
+    display: flex;
+    /* Exibe como flexível */
+    align-items: center;
+    /* Centraliza verticalmente */
+    position: relative;
+    /* Posicionamento relativo */
+}
+
+/* Estilos para o campo de busca */
+#buscar {
+    flex-grow: 1;
+    /* Cresce para ocupar espaço restante */
+    padding: 0.4rem;
+    /* Espaçamento interno */
+    border-radius: 5px;
+    /* Borda arredondada */
+    border: none;
+    /* Sem borda */
+    outline: none;
+    /* Sem contorno ao foco */
+}
+
+/* Estilos para o botão de busca no cabeçalho */
+#btn-buscar {
+    background-color: transparent;
+    /* Cor de fundo transparente */
+    border: none;
+    /* Sem borda */
+    position: absolute;
+    /* Posicionamento absoluto */
+    right: 10px;
+    /* À direita */
+    top: 50%;
+    /* Ao centro verticalmente */
+    transform: translateY(-50%);
+    /* Ajusta para centralizar */
+    cursor: pointer;
+    /* Cursor ao passar */
+}
+
+/* Estilos para a imagem de busca no botão */
+.img-search {
+    width: 25px;
+    /* Largura */
+    object-fit: contain;
+    /* Ajuste de imagem */
+}
+
+/* Estilos para os links de ícone no cabeçalho */
+.icon-link {
+    display: flex;
+    /* Exibe como flexível */
+    flex-direction: column;
+    /* Direção de coluna */
+    align-items: center;
+    /* Centraliza verticalmente */
+    margin: 0 0.5rem;
+    /* Margem externa */
+}
+
+/* Estilos da navegação principal */
+nav {
+    display: grid;
+    /* Exibe como grid */
+    grid-template-columns: repeat(2, 1fr);
+    /* Duas colunas iguais */
+    text-align: center;
+    /* Centraliza texto */
+    background-color: var(--cor-terciaria);
+    /* Cor de fundo */
+    padding: 0.5rem;
+    /* Espaçamento interno */
+}
+
+/* Estilos para o primeiro link da navegação */
+nav a:first-child {
+    border-right: 1px solid var(--preto);
+    /* Linha divisória à direita */
+}
+
+nav a {
+    text-decoration: none;
+    color: black;
+}
+
+
+
+body {
+    
+    margin: 0;
+    padding: 0;
+    background-image: url(IMGS-VARIADAS/FUNDO4.jpg);
+    background-size: 100%;
+    font-family: "Comfortaa", sans-serif;
+    
+}
+
+.login {
+    width: 320px;
+    height: 420px;
+    border: 2px solid #000;
+    border: 2px solid #000;
+    border-radius: 80px 0px 80px 0px;
+    color: #fff;
+    background-color: rgba(0, 0, 5, 0.8);
+    top: 50%;
+    left: 50%;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    box-sizing: border-box;
+    padding: 68px 28px;
+}
+
+
+.usuario {
+    border-radius: 50%;
+    position: absolute;
+    top: -50px;
+    left: 112px;
+}
+
+h1 {
+    margin: 0;
+    padding-top: 0;
+    padding-left: 0;
+    padding-bottom: 20px;
+    letter-spacing: 10px;
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 25px;
+}
+
+
+.login p {
+    margin: 0;
+    padding: 0;
+    font-weight: bold;
+}
+
+.login input {
+    width: 100%;
+    margin-bottom: 21px;
+}
+
+.login input[type="text"], input[type="password"] {
+    border: none;
+    border-bottom: 1px solid white;
+    background: transparent;
+    outline: none;
+    height: 40px;
+    color: white;
+    font-size: 16px;
+
+}
+
+
+.login input[type="submit"] {
+    border: none;
+    outline: none;
+    height: 35px;
+    color: #000;
+    background: #fff;
+    border-radius: 20px;
+    transition: 0.2s;
+}
+
+
+.login input[type="submit"]:hover {
+    cursor:pointer;
+    background: #ff4d4d;
+    transition: 0.2s;
+}
+
+.login a {
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 12px;
+    line-height: 20px;
+    color: #4b4b4b;
+    transition: 0.2s;
+
+}
+
+.login a:hover {
+    transition: 0.2s;
+    color: #ff4d4d;
+}
