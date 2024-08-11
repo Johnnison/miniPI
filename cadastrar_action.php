@@ -10,16 +10,34 @@ $senha = filter_input(INPUT_POST, 'senha');
 $genero = filter_input(INPUT_POST, 'genero');
 
 
-$sql = $pdo->prepare("INSERT INTO usuarios (primeironome, sobrenome, email, telefone, senha, genero) VALUES (:primeironome, :sobrenome, :email, :telefone, :senha, :genero) ");
+if ($primeironome && $sobrenome && $email && $telefone && $senha && $genero) {
 
-$sql->bindValue(':primeironome', $primeironome);
-$sql->bindValue(':sobrenome', $sobrenome);
-$sql->bindValue(':email', $email);
-$sql->bindValue(':telefone', $telefone);
-$sql->bindValue(':senha', $senha);
-$sql->bindValue(':genero', $genero);
-$sql->execute();
+    $sql = $pdo->prepare("SELECT * FROM usuarios WHERE email = :email");
+    $sql->bindValue(':email', $email);
+    $sql->execute();
 
 
-header("Location: index.php");
+    if ($sql->rowCount() === 0){
 
+        $sql = $pdo->prepare("INSERT INTO usuarios (primeironome, sobrenome, email, telefone, senha, genero) 
+        VALUES (:primeironome, :sobrenome, :email, :telefone, :senha, :genero) ");
+
+        $sql->bindValue(':primeironome', $primeironome);
+        $sql->bindValue(':sobrenome', $sobrenome);
+        $sql->bindValue(':email', $email);
+        $sql->bindValue(':telefone', $telefone);
+        $sql->bindValue(':senha', $senha);
+        $sql->bindValue(':genero', $genero);
+
+        $sql->execute();
+
+
+        header("Location: index.php");
+        exit;
+    }else{
+        header("Location: cadastrar.php");
+    }
+}else{
+    header("Location: cadastrar.php");
+    exit;
+}

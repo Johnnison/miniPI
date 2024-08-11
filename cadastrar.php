@@ -31,12 +31,12 @@
   </header>
 
   <nav>
-    <a href="">Catálogo</a>
+    <a href="">Catálogo</a>        
     <a href="">Sobre a loja</a>
   </nav>
 
   <div class="form">
-    <form action="cadastrar_action.php" method="POST"> <!-- Corrigido para o arquivo correto -->
+    <form method="POST" action="cadastrar_action.php"> <!-- Corrigido para o arquivo correto -->
       <div class="form-header">
         <div class="title">
           <h1>Cadastrar</h1>
