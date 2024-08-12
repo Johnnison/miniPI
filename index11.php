@@ -39,7 +39,7 @@
 
 
     <div class="login">
-        <img src="IMGS-VARIADAS/FUNDO-TELA-LOGIN.jpg" class="usuario" width="100" alt="">
+        <img src="IMGS-VARIADAS/estrelas-ros.jpg" class="usuario" width="100" alt="">
         <h1>Login</h1>
 
         <form>
