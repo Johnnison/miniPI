@@ -32,6 +32,21 @@ if ($sql->rowCount() > 0) {
             <td><?= $usuarios['senha']; ?></td>
             <td><?= $usuarios['genero']; ?></td>
             <td><?= $usuarios['imagemperfil']; ?></td>
+
+
+            <td>
+                <?php if ($usuarios['imagemperfil']): ?>
+                    <img src="IMG/<?= $usuarios['imagemperfil']; ?>" width="100" height="100" alt="Imagem Perfil">
+                <?php else: ?>
+                    <img src="IMG/default-profile.png" width="100" height="100" alt="Imagem Padrão">
+                <?php endif; ?>
+            </td>
+
+
+
+
+
+
             <td>
                 <a href="editar.php?id=<?= $usuarios['id']; ?>">[ Editar ]</a>
                 <a href="excluir.php?id=<?= $usuarios['id']; ?>">[ Excluir ]</a>

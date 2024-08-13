@@ -36,7 +36,8 @@
   </nav>
 
   <div class="form">
-    <form method="POST" action="cadastrar_action.php"> <!-- Corrigido para o arquivo correto -->
+    <form method="POST" action="cadastrar_action.php" enctype="multipart/form-data"> <!-- Corrigido para o arquivo correto -->
+
       <div class="form-header">
         <div class="title">
           <h1>Cadastrar</h1>
@@ -99,9 +100,19 @@
 
 
       <div class="foto-perfil">
-        <img src="IMG/default-profile.png" alt="Foto de Perfil" id="foto" width="150" height="150"> <!-- Imagem de perfil padrão -->
-        <input type="file" id="upload" accept="image/*"> <!-- Campo para upload da foto de perfil -->
+        <img src="/IMGS-VARIADAS/IMAGEM-PADRÃO-UPLOADS.jpg" alt="Foto de Perfil" id="foto" width="150" height="150"> <!-- Imagem de perfil padrão -->
+        <input type="file" id="upload" accept="/image*"> <!-- Campo para upload da foto de perfil -->
       </div>
+
+
+
+
+
+
+
+
+
+
       <script>
         // Script para atualizar a foto de perfil quando um arquivo é selecionado
         document.getElementById('upload').addEventListener('change', function(event) {
