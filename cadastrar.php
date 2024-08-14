@@ -1,7 +1,6 @@
 <?php
 require_once 'config.php';
-
-
+/* ///////Inclui o arquivo de configuração para a conexão com o banco de dados./////////// */
 ?>
 
 <!DOCTYPE html>
@@ -16,8 +15,11 @@ require_once 'config.php';
 
 <body>
 
+
   <header>
     <a href="">LudoFashion</a>
+
+    <!-- buscar com MÉTODO POST -->
     <form action="formulario.php" method="post" id="form-buscar"> <!-- Corrigido para "post" -->
       <input type="search" name="buscar" id="buscar" placeholder="buscar...">
       <button type="submit" id="btn-buscar" class="btn-transparent">
@@ -25,6 +27,7 @@ require_once 'config.php';
       </button>
     </form>
 
+    <!-- Links para cadastro e dúvidas -->
     <a href="" class="icon-link">
       <img src="IMG/cadastre-seX.png" alt="Cadastre-se" width="40px">
       Cadastre-se
@@ -41,10 +44,14 @@ require_once 'config.php';
     <a href="">Sobre a loja</a>
   </nav>
 
+<!--/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////-->
+
   <div class="form">
+    <!-- Formulário para cadastro de usuário -->
     <form method="POST" action="cadastrar_action.php" enctype="multipart/form-data"> <!-- Corrigido para o arquivo correto -->
 
       <div class="form-header">
+            <!-- Cabeçalho do formulário -->
         <div class="title">
           <h1>Cadastrar</h1>
         </div>
@@ -55,7 +62,7 @@ require_once 'config.php';
 
       <div class="input-box">
         <label for="primeironome">Primeiro nome</label>
-        <input id="primeironome" type="text" name="primeironome" placeholder="Digite seu Primeiro nome" required> <!-- Corrigido para 'primeiro_nome' -->
+        <input id="primeironome" type="text" name="primeironome" placeholder="Digite seu Primeiro nome" required> <!--  -->
       </div>
 
       <div class="input-box">
@@ -70,13 +77,15 @@ require_once 'config.php';
 
       <div class="input-box">
         <label for="telefone">Celular</label>
-        <input id="telefone" type="tel" name="telefone" placeholder="(xx) xxxx-xxxx" required> <!-- Corrigido para 'telefone' -->
+        <input id="telefone" type="tel" name="telefone" placeholder="(xx) xxxx-xxxx" required> <!--  -->
       </div>
 
       <div class="input-box">
         <label for="senha">Senha</label>
         <input id="senha" type="password" name="senha" placeholder="Digite sua Senha" required>
       </div>
+
+     <!-- Opções de gênero -->
 
       <div class="gender-inputs">
         <div class="gender-title">
@@ -100,12 +109,13 @@ require_once 'config.php';
 
         <div class="gender-input">
           <input type="radio" id="none" name="genero" value="prefiro_nao_dizer">
-          <label for="none">Prefiro não Dizer</label> <!-- Corrigido para 'none' -->
+          <label for="none">Prefiro não Dizer</label> <!-- -->
         </div>
       </div>
 
 
       <div class="foto-perfil">
+        <!-- Exibe a foto de perfil e campo para upload -->
         <img src="" alt="Foto de Perfil" id="foto" width="150" height="150"> <!-- Imagem de perfil padrão -->
         
         <label for="imagemperfil">Imagem de Perfil:</label>
@@ -127,13 +137,15 @@ require_once 'config.php';
 
 
       <script>
-        // Script para atualizar a foto de perfil quando um arquivo é selecionado
+        // Script JAVASCRIPT 
+        //SERVE PARA ATUALIZAR A IMAGEM DE PERFIL QUANDO UM ARQUIVO UM ARQUIVO É SELECIONAR 
+
         document.getElementById('imagemperfil').addEventListener('change', function(event) {
-          const file = event.target.files[0]; // Obtém o primeiro arquivo selecionado
-          const reader = new FileReader(); // Cria um objeto FileReader
+          const file = event.target.files[0]; // PUXA o primeiro arquivo selecionado
+          const reader = new FileReader(); // Cria um objeto FileReader FAZ A LEITURA DO ARQUIVO E PODEMOS DIZER QUE EXIBI O ARQUIVO NA TELA
 
           reader.onload = function(e) {
-            // Atualiza a imagem da foto de perfil com o arquivo selecionado
+            // ATUALIZA a IMAGEM da FOTO de PERFIL com o arquivo SELECIONADO
             document.getElementById('foto').src = e.target.result;
           };
 
