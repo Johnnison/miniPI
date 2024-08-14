@@ -50,7 +50,7 @@ if ($id) {
     <br>
     <label>
         Imagem Perfil: <input type="text" name="imagemperfil" value="<?=$usuarios['imagemperfil'];?>"/>
-        <input type="file" id="upload" accept="image"> 
+        <input type="file" id="id" accept="image"> 
     </label>
     <br>
     <input type="submit" value="Atualizar"/>

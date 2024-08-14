@@ -1,3 +1,9 @@
+<?php
+require_once 'config.php';
+
+
+?>
+
 <!DOCTYPE html>
 <html lang="pt-BR">
 
@@ -100,9 +106,16 @@
 
 
       <div class="foto-perfil">
-        <img src="/IMGS-VARIADAS/IMAGEM-PADRÃO-UPLOADS.jpg" alt="Foto de Perfil" id="foto" width="150" height="150"> <!-- Imagem de perfil padrão -->
-        <input type="file" id="upload" accept="/image*"> <!-- Campo para upload da foto de perfil -->
+        <img src="" alt="Foto de Perfil" id="foto" width="150" height="150"> <!-- Imagem de perfil padrão -->
+        
+        <label for="imagemperfil">Imagem de Perfil:</label>
+        <input type="file" name="imagemperfil" id="imagemperfil" accept="image/*"><br>
+
+      
       </div>
+
+    
+
 
 
 
@@ -115,7 +128,7 @@
 
       <script>
         // Script para atualizar a foto de perfil quando um arquivo é selecionado
-        document.getElementById('upload').addEventListener('change', function(event) {
+        document.getElementById('imagemperfil').addEventListener('change', function(event) {
           const file = event.target.files[0]; // Obtém o primeiro arquivo selecionado
           const reader = new FileReader(); // Cria um objeto FileReader
 

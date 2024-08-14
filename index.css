@@ -1,0 +1,55 @@
+/* styles.css */
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f9f3f3; /* Cor de fundo suave rosa claro */
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    background-color: #f48fb1; /* Cor rosa claro */
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin: 0;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+}
+
+table, th, td {
+    border: 1px solid #f06292; /* Cor rosa mais forte para bordas */
+}
+
+th {
+    background-color: #f8bbd0; /* Cor rosa muito claro para cabeçalhos */
+    color: #880e4f; /* Cor rosa escuro para o texto dos cabeçalhos */
+    padding: 10px;
+}
+
+td {
+    padding: 10px;
+    text-align: center;
+}
+
+a {
+    color: #c2185b; /* Cor rosa escuro para links */
+    text-decoration: none;
+    padding: 5px 10px;
+    border: 1px solid #c2185b;
+    border-radius: 5px;
+}
+
+a:hover {
+    background-color: #c2185b; /* Cor rosa escuro para fundo ao passar o mouse */
+    color: white;
+}
+
+img {
+    border-radius: 50%; /* Imagens de perfil redondas */
+    border: 2px solid #f48fb1; /* Borda rosa claro para as imagens */
+}

@@ -1,0 +1,58 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #fce4ec; /* Rosa claro */
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    background-color: #f48fb1; /* Rosa claro */
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin: 0;
+}
+
+form {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #880e4f; /* Rosa escuro */
+}
+
+input[type="text"], input[type="email"], input[type="tel"], input[type="password"], select {
+    width: calc(100% - 22px);
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #f06292; /* Rosa mais forte */
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+input[type="file"] {
+    margin-bottom: 15px;
+}
+
+input[type="submit"] {
+    background-color: #f48fb1; /* Rosa claro */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+input[type="submit"]:hover {
+    background-color: #f06292; /* Rosa mais forte */
+}
