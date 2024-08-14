@@ -13,7 +13,7 @@ if ($sql->rowCount() > 0) {
 
 
 
-<!DOCTYPE html>
+<!DOCTYPE html> <!--CRIA TABELA USUARIOS USEI foreach PARA ITERAR(REPETIR) SOBRE OS USUARIOS E EXIBILOS NA TABELA -->
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -49,7 +49,7 @@ if ($sql->rowCount() > 0) {
                 <?php if ($usuarios['imagemperfil']): ?>
                     <img src="image/<?= $usuarios['imagemperfil']; ?>" width="100" height="100" alt="Imagem Perfil">
                 <?php else: ?>
-                    <img src="IMG/default-profile.png" width="100" height="100" alt="Imagem Padrão">
+                    <img src="IMGS-VARIADAS/IMAGEM-PADRÃO-UPLOADS.jpg" width="100" height="100" alt="Imagem Padrão">
                 <?php endif; ?>
             </td>
             <td>
