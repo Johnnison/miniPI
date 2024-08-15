@@ -63,8 +63,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 genero = :genero
                 WHERE id = :id");
         }
-
-        $sql->bindValue(':primeironome', $primeironome);
+                                                                                       //ban separadame
+        $sql->bindValue(':primeironome', $primeironome);   
         $sql->bindValue(':sobrenome', $sobrenome);
         $sql->bindValue(':email', $email);
         $sql->bindValue(':telefone', $telefone);

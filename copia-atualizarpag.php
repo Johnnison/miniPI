@@ -7,7 +7,7 @@
     
     <title>Atualizar Usuário</title>
 </head>
-<body>
+<body>                                                                                           <!-- ml cha transf caracte special em simpl html-->
     <h1>Atualizar Usuário</h1>
     <form action="prossesar_atualizacao.php" method="POST" enctype="multipart/form-data">
         <input type="hidden" name="id" value="<?php echo htmlspecialchars($usuario['id']); ?>">

@@ -7,7 +7,7 @@
 require 'config.php';
 
 
-// Verifica se o formulário foi enviado CHECA DE É METODO POST
+// Verifica se o formulário foi enviado CHECA SE É METODO POST
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $primeironome = filter_input(INPUT_POST, 'primeironome');
     //RECUPERA O VALOR DO CAMPO E FILTRA PARA GARANTIR QUE NÃO HAJA DADOS MALICIOSOS O MESMO FUNCIONA PARA OS OUTROS

@@ -1,21 +1,27 @@
 <?php
-require 'config.php';
+ //VALIDAÇÃO E RECUPERAÇÃO DE DADOS
+
+require 'config.php';// INCLUIR O ARQUIVO DE CONFIGURAÇÃO DE CONEXÃO DO BANCO
 
 // Verifica se o ID do usuário foi passado via GET
 $id = filter_input(INPUT_GET, 'id', FILTER_VALIDATE_INT);
 
 if ($id) {
-    // Consulta os dados do usuário
+    // Consulta os dados do usuário ATRAVÉS DO ID
     $sql = $pdo->prepare("SELECT * FROM usuarios WHERE id = :id");
-    $sql->bindValue(':id', $id);
-    $sql->execute();
+    $sql->bindValue(':id', $id); //VINCULA O PARAMETRO ID AO PARAMETRO DA CONSULTA
+    $sql->execute();//EXECUTA A CONSULTA 
 
+    //VERIFICA SE APENAS UM USUARIO FOI ENCONTRADO COM O ID FORNECIDO
     if ($sql->rowCount() === 1) {
+        //BUSCA OS DADOS DO USUARIO EM FORMATO DE ARRAY ASSOCIATIVO
         $usuario = $sql->fetch(PDO::FETCH_ASSOC);
     } else {
+        //SE NENHUM USUARIO FOI ENCONTRADO, EXIBE UMA MENSAGEM DE ERRO E ENCERRA O SCRIPT 
         die("Usuário não encontrado.");
     }
 } else {
+    // SE O ID NÃO FOI FORNECIDO OU É INVALIDO, EXIBE UMA MENSAGEM DE ERRO E ENCERRA O SCRIPT
     die("ID não fornecido.");
 }
 ?>
@@ -37,9 +43,10 @@ if ($id) {
 <body>
     <h1>Atualizar Usuário</h1>
     <form action="prossesar_atualizacao.php" method="POST" enctype="multipart/form-data">
+        <!-- Campo oculto para enviar o ID do usuário junto com o formulário -->
         <input type="hidden" name="id" value="<?php echo htmlspecialchars($usuario['id']); ?>">
 
-        <label for="primeironome">Primeiro Nome:</label>
+        <label for="primeironome">Primeiro Nome:</label>                      <!--htmlspecialchars garante que os dados sejam exibidos corretamento no navegador -->
         <input type="text" name="primeironome" id="primeironome" value="<?php echo htmlspecialchars($usuario['primeironome']); ?>" required><br>
 
         <label for="sobrenome">Sobrenome:</label>
