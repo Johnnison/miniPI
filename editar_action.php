@@ -1,9 +1,9 @@
 <?php
 require 'config.php';
-
-// Função para gerar um nome único para o arquivo
+//EDITAR CÓDIGOS  E CONEXÃO
+// Função para gerar um NOME UNICO para o arquivo
 function gerarNomeArquivo($extensao) {
-    return uniqid() . '.' . $extensao;
+    return uniqid() . '.' . $extensao; //RETORNA
 }
 
 // Verifica se o formulário foi enviado
@@ -17,13 +17,15 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $senha = filter_input(INPUT_POST, 'senha');
     $genero = filter_input(INPUT_POST, 'genero');
     
+
+    //CÓDIGO ESPECIAL PARA IMAGEM
     // Inicializa a variável para imagem de perfil
     $imagemperfil = null;
     
     // Verifica se o arquivo foi enviado e é válido
     if (isset($_FILES['imagemperfil']) && $_FILES['imagemperfil']['error'] === UPLOAD_ERR_OK) {
-        $arquivoTmp = $_FILES['imagemperfil']['tmp_name'];
-        $extensao = pathinfo($_FILES['imagemperfil']['name'], PATHINFO_EXTENSION);
+        $arquivoTmp = $_FILES['imagemperfil']['tmp_name']; //ENDEREÇO
+        $extensao = pathinfo($_FILES['imagemperfil']['name'], PATHINFO_EXTENSION); //EXTENSÃO DO ARQUIVO
         $nomeArquivo = gerarNomeArquivo($extensao);
         $caminhoDestino = 'image/' . $nomeArquivo;
 
@@ -31,11 +33,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         if (move_uploaded_file($arquivoTmp, $caminhoDestino)) {
             $imagemperfil = $nomeArquivo;
         } else {
-            // Em caso de falha ao mover o arquivo
-            $imagemperfil = null;
+            // Em caso de falha ao mover o arquivo 
+            $imagemperfil = null; //FALHOU CONTINUA NULO
         }
     }
-
+     //-----------------------------------------------------------------------------------------------------------------
     // Verifica se todos os dados são válidos
     if ($id && $primeironome && $sobrenome && $email && $telefone && $senha && $genero) {
         // Se uma nova imagem foi carregada, atualiza o caminho da imagem
@@ -63,7 +65,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 genero = :genero
                 WHERE id = :id");
         }
-                                                                                       //ban separadame
+                                                                                       // blind value banco separadamente
         $sql->bindValue(':primeironome', $primeironome);   
         $sql->bindValue(':sobrenome', $sobrenome);
         $sql->bindValue(':email', $email);

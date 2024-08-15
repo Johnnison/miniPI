@@ -4,11 +4,12 @@
 require 'config.php';// INCLUIR O ARQUIVO DE CONFIGURAÇÃO DE CONEXÃO DO BANCO
 
 // Verifica se o ID do usuário foi passado via GET
-$id = filter_input(INPUT_GET, 'id', FILTER_VALIDATE_INT);
+$id = filter_input(INPUT_GET, 'id', FILTER_VALIDATE_INT); //valida se é inteiro
 
 if ($id) {
     // Consulta os dados do usuário ATRAVÉS DO ID
-    $sql = $pdo->prepare("SELECT * FROM usuarios WHERE id = :id");
+    $sql = $pdo->prepare("SELECT * FROM usuarios WHERE id = :id"); // PREPAROU UMA CONSULTA
+
     $sql->bindValue(':id', $id); //VINCULA O PARAMETRO ID AO PARAMETRO DA CONSULTA
     $sql->execute();//EXECUTA A CONSULTA 
 
@@ -62,9 +63,10 @@ if ($id) {
         <input type="password" name="senha" id="senha"><br>
 
         <label for="genero">Gênero:</label>
-        <select name="genero" id="genero" required>
-            <option value="masculino" <?php echo $usuario['genero'] === 'masculino' ? 'selected' : ''; ?>>Masculino</option>
-            <option value="feminino" <?php echo $usuario['genero'] === 'feminino' ? 'selected' : ''; ?>>Feminino</option>
+        <select name="genero" id="genero" required> <!-- CAMPO DE SELEÇÃO DE GENERO COM ID GENERO-->
+            <option value="masculino" <?php echo $usuario['genero'] === 'masculino' ? 'selected' : ''; ?>>Masculino</option> <!-- código php embutido dentro do html-->
+            <option value="feminino" <?php echo $usuario['genero'] === 'feminino' ? 'selected' : ''; ?>>Feminino</option> <!-- $usuario[genero] isso verifica se o valor feminino é 
+            exatamente o mesmo que ta no id--> 
             <option value="outro" <?php echo $usuario['genero'] === 'outro' ? 'selected' : ''; ?>>Outro</option>
         </select><br>
 

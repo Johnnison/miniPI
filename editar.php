@@ -4,18 +4,18 @@ require 'config.php';
 $usuarios = [];
 $id = filter_input(INPUT_GET, 'id');
 if ($id) {
-    $sql = $pdo->prepare("SELECT * FROM usuarios WHERE id = :id");
-    $sql->bindValue(':id', $id);
+    $sql = $pdo->prepare("SELECT * FROM usuarios WHERE id = :id");                   
+    $sql->bindValue(':id', $id);                                                                                                       //blindvalue melhora segurança
     $sql->execute();
 
-    if ($sql->rowCount() > 0) {
-        $usuarios = $sql->fetch(PDO::FETCH_ASSOC);
+    if ($sql->rowCount() > 0) {                                                                                                        //rowcont retorna usuarios
+        $usuarios = $sql->fetch(PDO::FETCH_ASSOC);   //associativo array
     } else {
-        header("Location: index.php");
+        header("Location: index.php"); // Se nenhum usuário for encontrado, redireciona para a página principal e encerra o script
         exit;
     }
 } else {
-    header("Location: index.php");
+    header("Location: index.php");// Se nao redireciona para a página principal
 }
 
 ?>
