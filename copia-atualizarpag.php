@@ -6,10 +6,10 @@
     <link rel="stylesheet" href="atualizarpag.css">
     
     <title>Atualizar Usuário</title>
-</head>
+</head> 
 <body>                                                                                           <!-- ml cha transf caracte special em simpl html-->
     <h1>Atualizar Usuário</h1>
-    <form action="prossesar_atualizacao.php" method="POST" enctype="multipart/form-data">
+    <form action="prossesar_atualizacao.php" method="POST" enctype="multipart/form-data">         <!-- AUMENTA A SEGURANÇA -->
         <input type="hidden" name="id" value="<?php echo htmlspecialchars($usuario['id']); ?>">
 
         <label for="primeironome">Primeiro Nome:</label>
@@ -28,7 +28,7 @@
         <input type="password" name="senha" id="senha"><br>
 
         <label for="genero">Gênero:</label>
-        <select name="genero" id="genero" required>
+        <select name="genero" id="genero" required> <!-- VERIFIQUE E VALIDA SE O GENERO REALMENTE BATE COM O ID USUARIO NO BANCO -->
             <option value="masculino" <?php echo $usuario['genero'] === 'masculino' ? 'selected' : ''; ?>>Masculino</option>
             <option value="feminino" <?php echo $usuario['genero'] === 'feminino' ? 'selected' : ''; ?>>Feminino</option>
             <option value="outro" <?php echo $usuario['genero'] === 'outro' ? 'selected' : ''; ?>>Outro</option>

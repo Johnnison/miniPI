@@ -10,7 +10,7 @@ if ($id) {
     // Consulta os dados do usuário ATRAVÉS DO ID
     $sql = $pdo->prepare("SELECT * FROM usuarios WHERE id = :id"); // PREPAROU UMA CONSULTA
 
-    $sql->bindValue(':id', $id); //VINCULA O PARAMETRO ID AO PARAMETRO DA CONSULTA
+    $sql->bindValue(':id', $id); //VINCULA O PARAMETRO ID AO PARAMETRO DA CONSULTA /// bind= os dados fornecidos pelo usuário são separados do código SQL.
     $sql->execute();//EXECUTA A CONSULTA 
 
     //VERIFICA SE APENAS UM USUARIO FOI ENCONTRADO COM O ID FORNECIDO

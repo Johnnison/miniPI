@@ -51,6 +51,7 @@ if ($sql->rowCount() > 0) {
             <td><?= $usuarios['genero']; ?></td><!--EXIBI -->
             <td>
                 <?php if ($usuarios['imagemperfil']): ?>
+                <!--CÓDIGO ESPECIAL PARA IMAGEM -->
                 <!-- Se houver uma imagem de perfil, exibe a imagem correspondente --> 
                     <img src="image/<?= $usuarios['imagemperfil']; ?>" width="100" height="100" alt="Imagem Perfil">
                 <?php else: ?>

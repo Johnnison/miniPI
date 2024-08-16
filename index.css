@@ -1,55 +1,55 @@
 /* styles.css */
 
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f9f3f3; /* Cor de fundo suave rosa claro */
-    margin: 0;
-    padding: 0;
+    font-family: Arial, sans-serif; /* DEFINE A FONTE PRINCIPAL COMO ARIAL, COM SAN SERIF COMO FONTE SECUNDÁRIA */
+    background-color: #f9f3f3; /* COR DE FUNDO SUAVE ROSA CLARO */
+    margin: 0; /* REMOVE AS MARGENS PADRÃO DO CORPO DA PÁGINA */
+    padding: 0; /* REMOVE O PADDING PADRÃO DO CORPO DA PÁGINA */
 }
 
 h1 {
-    background-color: #f48fb1; /* Cor rosa claro */
-    color: white;
-    text-align: center;
-    padding: 20px;
-    margin: 0;
+    background-color: #f48fb1; /* COR ROSA CLARO COMO COR DE FUNDO DO CABEÇALHO H1 */
+    color: white; /* COR DO TEXTO COMO BRANCO */
+    text-align: center; /* ALINHA O TEXTO NO CENTRO */
+    padding: 20px; /* ADICIONA 20PX DE PADDING AO REDOR DO TEXTO */
+    margin: 0; /* REMOVE A MARGEM PADRÃO DO CABEÇALHO H1 */
 }
 
 table {
-    width: 100%;
-    border-collapse: collapse;
-    margin: 20px 0;
+    width: 100%; /* DEFINE A LARGURA DA TABELA COMO 100% DA LARGURA DISPONÍVEL */
+    border-collapse: collapse; /* REMOVE ESPAÇOS ENTRE AS BORDAS DAS CÉLULAS DA TABELA */
+    margin: 20px 0; /* ADICIONA 20PX DE MARGEM SUPERIOR E INFERIOR À TABELA */
 }
 
 table, th, td {
-    border: 1px solid #f06292; /* Cor rosa mais forte para bordas */
+    border: 1px solid #f06292; /* COR ROSA MAIS FORTE PARA AS BORDAS DA TABELA, CÉLULAS DE CABEÇALHO E CÉLULAS */
 }
 
 th {
-    background-color: #f8bbd0; /* Cor rosa muito claro para cabeçalhos */
-    color: #880e4f; /* Cor rosa escuro para o texto dos cabeçalhos */
-    padding: 10px;
+    background-color: #f8bbd0; /* COR ROSA MUITO CLARO COMO COR DE FUNDO DOS CABEÇALHOS */
+    color: #880e4f; /* COR ROSA ESCURO PARA O TEXTO DOS CABEÇALHOS */
+    padding: 10px; /* ADICIONA 10PX DE PADDING INTERNO AOS CABEÇALHOS */
 }
 
 td {
-    padding: 10px;
-    text-align: center;
+    padding: 10px; /* ADICIONA 10PX DE PADDING INTERNO ÀS CÉLULAS DA TABELA */
+    text-align: center; /* ALINHA O TEXTO NO CENTRO DAS CÉLULAS DA TABELA */
 }
 
 a {
-    color: #c2185b; /* Cor rosa escuro para links */
-    text-decoration: none;
-    padding: 5px 10px;
-    border: 1px solid #c2185b;
-    border-radius: 5px;
+    color: #c2185b; /* COR ROSA ESCURO PARA OS LINKS */
+    text-decoration: none; /* REMOVE O SUBLINHADO DOS LINKS */
+    padding: 5px 10px; /* ADICIONA 5PX DE PADDING NA PARTE SUPERIOR E INFERIOR E 10PX NAS LATERAIS DOS LINKS */
+    border: 1px solid #c2185b; /* BORDURA ROSA ESCURO AO REDOR DOS LINKS */
+    border-radius: 5px; /* ADICIONA BORDAS ARREDONDADAS COM 5PX DE RAIO */
 }
 
 a:hover {
-    background-color: #c2185b; /* Cor rosa escuro para fundo ao passar o mouse */
-    color: white;
+    background-color: #c2185b; /* COR ROSA ESCURO COMO COR DE FUNDO DOS LINKS QUANDO O MOUSE ESTIVER SOBRE ELES */
+    color: white; /* COR DO TEXTO DOS LINKS COMO BRANCO */
 }
 
 img {
-    border-radius: 50%; /* Imagens de perfil redondas */
-    border: 2px solid #f48fb1; /* Borda rosa claro para as imagens */
+    border-radius: 50%; /* TORNA AS IMAGENS REDONDAS (IMAGENS DE PERFIL) */
+    border: 2px solid #f48fb1; /* BORDURA ROSA CLARO AO REDOR DAS IMAGENS */
 }

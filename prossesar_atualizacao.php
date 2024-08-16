@@ -20,7 +20,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     if (!$id) {
         die("ID inválido."); //SE NÃO ELE EXIBI UMA MENSAGEM DE ERRO 
     }
-
+   
+    
+    //CÓDIGO IMPORTANTE PARA IMAGENS
     // Verifica se o arquivo foi enviado e é válido
     $imagemperfil = null;
     if (isset($_FILES['imagemperfil']) && $_FILES['imagemperfil']['error'] === UPLOAD_ERR_OK) {
@@ -41,7 +43,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 email = :email,
                 telefone = :telefone,
                 genero = :genero" .
-                ($imagemperfil ? ", imagemperfil = :imagemperfil" : "") . //ADICIONA O CAMPO IMAGEM PERFIL SE UMA IMAGEM FOI ENVIADA
+                ($imagemperfil ? ", imagemperfil = :imagemperfil" : "") . //ADICIONA O CAMPO (IMAGEM PERFIL) SE UMA IMAGEM FOI ENVIADA
                 ($senha ? ", senha = :senha" : "") .
             " WHERE id = :id";// CONDIÇÃO PARA IDENTIFICAR O USUARIO A SER ATUALIZADO
 

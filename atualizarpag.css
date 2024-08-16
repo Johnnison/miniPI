@@ -1,58 +1,58 @@
 body {
-    font-family: Arial, sans-serif;
-    background-color: #fce4ec; /* Rosa claro */
-    margin: 0;
-    padding: 0;
+    font-family: Arial, sans-serif; /* DEFINE A FONTE PRINCIPAL DO SITE COMO ARIAL, COM SAN SERIF COMO FONTE SECUNDÁRIA */
+    background-color: #fce4ec; /* ROSA CLARO COMO COR DE FUNDO DO CORPO DA PÁGINA */
+    margin: 0; /* REMOVE AS MARGENS PADRÃO DO CORPO DA PÁGINA */
+    padding: 0; /* REMOVE O PADDING PADRÃO DO CORPO DA PÁGINA */
 }
 
 h1 {
-    background-color: #f48fb1; /* Rosa claro */
-    color: white;
-    text-align: center;
-    padding: 20px;
-    margin: 0;
+    background-color: #f48fb1; /* ROSA CLARO COMO COR DE FUNDO DO CABEÇALHO H1 */
+    color: white; /* COR DO TEXTO COMO BRANCO */
+    text-align: center; /* ALINHA O TEXTO NO CENTRO */
+    padding: 20px; /* ADICIONA 20PX DE PADDING AO REDOR DO TEXTO */
+    margin: 0; /* REMOVE A MARGEM PADRÃO DO CABEÇALHO H1 */
 }
 
 form {
-    max-width: 600px;
-    margin: 20px auto;
-    padding: 20px;
-    background-color: white;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    max-width: 600px; /* DEFINE A LARGURA MÁXIMA DO FORMULÁRIO COMO 600PX */
+    margin: 20px auto; /* ADICIONA 20PX DE MARGEM SUPERIOR E INFERIOR, CENTRALIZANDO O FORMULÁRIO HORIZONTALMENTE */
+    padding: 20px; /* ADICIONA 20PX DE PADDING INTERNO */
+    background-color: white; /* COR DE FUNDO DO FORMULÁRIO COMO BRANCO */
+    border-radius: 8px; /* ADICIONA BORDAS ARREDONDADAS COM 8PX DE RAIO */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* ADICIONA UMA SOMBRA SUAVE AO REDOR DO FORMULÁRIO */
 }
 
 label {
-    display: block;
-    margin-bottom: 8px;
-    font-weight: bold;
-    color: #880e4f; /* Rosa escuro */
+    display: block; /* EXIBE O RÓTULO COMO UM ELEMENTO BLOCO (NÃO INLINE) */
+    margin-bottom: 8px; /* ADICIONA 8PX DE MARGEM NA PARTE INFERIOR DOS RÓTULOS */
+    font-weight: bold; /* DEFINE O PESO DA FONTE COMO NEGRITO */
+    color: #880e4f; /* COR DO TEXTO DOS RÓTULOS COMO ROSA ESCURO */
 }
 
 input[type="text"], input[type="email"], input[type="tel"], input[type="password"], select {
-    width: calc(100% - 22px);
-    padding: 10px;
-    margin-bottom: 15px;
-    border: 1px solid #f06292; /* Rosa mais forte */
-    border-radius: 4px;
-    box-sizing: border-box;
+    width: calc(100% - 22px); /* DEFINE A LARGURA DOS CAMPOS COMO 100% DA LARGURA DISPONÍVEL MENOS 22PX */
+    padding: 10px; /* ADICIONA 10PX DE PADDING INTERNAMENTE */
+    margin-bottom: 15px; /* ADICIONA 15PX DE MARGEM NA PARTE INFERIOR DOS CAMPOS */
+    border: 1px solid #f06292; /* DEFINE A BORDURA COMO 1PX SOLIDA E COR ROSA MAIS FORTE */
+    border-radius: 4px; /* ADICIONA BORDAS ARREDONDADAS COM 4PX DE RAIO */
+    box-sizing: border-box; /* GARANTE QUE O PADDING E A BORDURA SÃO INCLUÍDOS NA LARGURA TOTAL DO ELEMENTO */
 }
 
 input[type="file"] {
-    margin-bottom: 15px;
+    margin-bottom: 15px; /* ADICIONA 15PX DE MARGEM NA PARTE INFERIOR DO CAMPO DE ARQUIVO */
 }
 
 input[type="submit"] {
-    background-color: #f48fb1; /* Rosa claro */
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 4px;
-    cursor: pointer;
-    font-size: 16px;
-    font-weight: bold;
+    background-color: #f48fb1; /* ROSA CLARO COMO COR DE FUNDO DO BOTÃO DE ENVIO */
+    color: white; /* COR DO TEXTO DO BOTÃO COMO BRANCO */
+    border: none; /* REMOVE A BORDURA PADRÃO DO BOTÃO */
+    padding: 10px 20px; /* ADICIONA 10PX DE PADDING NA PARTE SUPERIOR E INFERIOR E 20PX NAS LATERAIS */
+    border-radius: 4px; /* ADICIONA BORDAS ARREDONDADAS COM 4PX DE RAIO */
+    cursor: pointer; /* MUDANÇA DO CURSOR PARA UM PONTEIRO QUANDO PASSAR SOBRE O BOTÃO */
+    font-size: 16px; /* DEFINE O TAMANHO DA FONTE COMO 16PX */
+    font-weight: bold; /* DEFINE O PESO DA FONTE COMO NEGRITO */
 }
 
 input[type="submit"]:hover {
-    background-color: #f06292; /* Rosa mais forte */
+    background-color: #f06292; /* ROSA MAIS FORTE COMO COR DE FUNDO DO BOTÃO QUANDO O MOUSE ESTIVER SOBRE ELE */
 }

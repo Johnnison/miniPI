@@ -48,8 +48,8 @@ require_once 'config.php';
 
   <div class="form">
     <!-- Formulário para cadastro de usuário -->
-<!-- enviar pelo post-->     <!--serão enviados para cadastrar_action -->     <!--enctype parmite envio de arquivo images -->
-    <form method="POST" action="cadastrar_action.php" enctype="multipart/form-data"> <!-- Corrigido para o arquivo correto -->
+<!-- enviar pelo post-->     <!-- inform serão enviados para cadastrar_action -->     
+    <form method="POST" action="cadastrar_action.php" enctype="multipart/form-data"><!--enctype parmite envio de arquivo images -->
 
       <div class="form-header">
             <!-- Cabeçalho do formulário -->
