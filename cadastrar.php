@@ -48,6 +48,7 @@ require_once 'config.php';
 
   <div class="form">
     <!-- Formulário para cadastro de usuário -->
+<!-- enviar pelo post-->     <!--serão enviados para cadastrar_action -->     <!--enctype parmite envio de arquivo images -->
     <form method="POST" action="cadastrar_action.php" enctype="multipart/form-data"> <!-- Corrigido para o arquivo correto -->
 
       <div class="form-header">
@@ -86,7 +87,7 @@ require_once 'config.php';
       </div>
 
      <!-- Opções de gênero -->
-
+     <!-- usando radio para limitar para somente uma opção de genero -->
       <div class="gender-inputs">
         <div class="gender-title">
           <h6>Gênero</h6>

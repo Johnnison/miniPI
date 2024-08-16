@@ -56,7 +56,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             $sql->bindValue(':imagemperfil', $imagemperfil);//VINCULA O VALOR DO IMAGEMPERFIL NA CONSULTA
 
             $sql->execute();//EXECUTA A CONSULTA PARA INSERIR O NOVO USUARIO
-
+            
+                              //pag.usuarios
             header("Location: index.php");//// REDIRECIONA O USUÁRIO PARA A PÁGINA 'index.php' APÓS O SUCESSO DA INSERÇÃO.
             exit; //// Termina o script para garantir que o redirecionamento ocorra.
         } else {
