@@ -10,4 +10,4 @@ CREATE TABLE `usuarios` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;  
 
 
-IMAGEM arquivo binario
+IMAGEM arquivo binario 
