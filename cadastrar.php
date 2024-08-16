@@ -130,26 +130,19 @@ require_once 'config.php';
 
 
 
-
-
-
-
-
-
-
       <script>
         // Script JAVASCRIPT 
         //SERVE PARA ATUALIZAR A IMAGEM DE PERFIL QUANDO UM ARQUIVO UM ARQUIVO É SELECIONAR 
 
         document.getElementById('imagemperfil').addEventListener('change', function(event) {
           const file = event.target.files[0]; // PUXA o primeiro arquivo selecionado
-          const reader = new FileReader(); // Cria um objeto FileReader FAZ A LEITURA DO ARQUIVO E PODEMOS DIZER QUE EXIBI O ARQUIVO NA TELA
+          const reader = new FileReader(); // Cria um objeto ,FileReader FAZ A LEITURA DO ARQUIVO E PODEMOS DIZER QUE EXIBI O ARQUIVO NA TELA
 
           reader.onload = function(e) {
             // ATUALIZA a IMAGEM da FOTO de PERFIL com o arquivo SELECIONADO
             document.getElementById('foto').src = e.target.result;
-          };
-
+          };                                                                   //getElementByI, puxa pelo
+                                                                              //event.target.files,exibir informações sobre os arquivos ou processar arquivos
           if (file) {
             reader.readAsDataURL(file); // Lê o arquivo como URL de dados
           }
