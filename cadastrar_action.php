@@ -10,7 +10,7 @@ require 'config.php';
 // Verifica se o formulário foi enviado CHECA SE É METODO POST
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $primeironome = filter_input(INPUT_POST, 'primeironome');
-    //RECUPERA O VALOR DO CAMPO E FILTRA PARA GARANTIR QUE NÃO HAJA DADOS MALICIOSOS O MESMO FUNCIONA PARA OS OUTROS
+    //PUXA O VALOR DO CAMPO E FILTRA PARA GARANTIR QUE NÃO HAJA DADOS MALICIOSOS O MESMO FUNCIONA PARA OS OUTROS
     $sobrenome = filter_input(INPUT_POST, 'sobrenome');
     $email = filter_input(INPUT_POST, 'email');
     $telefone = filter_input(INPUT_POST, 'telefone');
@@ -39,7 +39,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $sql = $pdo->prepare("SELECT * FROM usuarios WHERE email = :email");
         $sql->bindValue(':email', $email); //VALIDAÇÃO PARA PREAPAR UMA CONSULTA SQL PARA VERIFICAR SE TEM ALGUM USUARIO COM O MESMO E-MAIL
         $sql->execute();//EXECUTA A CONSULTA 
-
+          
+        //verifica se a consulta retornou alguma linha
         if ($sql->rowCount() === 0) { //VERIFICA SE A CONSULTA NÃO RETORNOU NENHUM RESULTADO (ou seja, o e-mail não está registrado).
 
             //INSERI UM NOVO USUARIO NA TABELA 
